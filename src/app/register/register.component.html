@@ -1,0 +1,62 @@
+<app-initial-header></app-initial-header>
+
+<br><br><br><br>
+
+<form class="col-md-6 offset-md-3" [formGroup]="addUserForm" (ngSubmit)="handleAddUserSubmit()">
+    <div class="form-group row justify-content-center">
+        <h3>Register</h3>
+        <br><br><br>
+    </div>
+    <div class="form-group row">
+        <label for="staticName" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Enter Name" formControlName="name"
+                [ngClass]="{ 'is-invalid': addUserForm.get('name')?.touched && addUserForm.get('name')?.invalid }" />
+            <div class="invalid-feedback">
+                <div>Name is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="staticName" class="col-sm-2 col-form-label">Phone</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Enter Phone Number" formControlName="phone"
+                [ngClass]="{ 'is-invalid': addUserForm.get('phone')?.touched && addUserForm.get('phone')?.invalid }" />
+            <div class="invalid-feedback">
+                <div *ngIf="addUserForm.get('phone')?.errors?.required">Phone number is required</div>
+                <div *ngIf="addUserForm.get('phone')?.errors?.pattern">Please enter 10 digit phone number</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="staticName" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" placeholder="Enter Email" formControlName="email"
+                [ngClass]="{ 'is-invalid': addUserForm.get('email')?.touched && addUserForm.get('email')?.invalid }" />
+            <div class="invalid-feedback">
+                <div *ngIf="addUserForm.get('email')?.errors?.required">Email is required</div>
+                <div *ngIf="addUserForm.get('email')?.errors?.email">Insert a valid email</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="staticName" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" placeholder="Enter Password" formControlName="password"
+                [ngClass]="{ 'is-invalid': addUserForm.get('password')?.touched && addUserForm.get('password')?.invalid }" />
+            <div class="invalid-feedback">
+                <div>Password is required</div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="isSaved" class="alert alert-success">
+        Registered Successfully
+    </div>
+
+    <div class="form-group row">
+        <div class="col-sm-10 offset-sm-2">
+          <button type="submit" class="btn btn-primary" [disabled]="!addUserForm.valid">Register</button>
+        </div>
+    </div>
+</form>

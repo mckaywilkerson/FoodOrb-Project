@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div class="col">
+    <div class="row">
+
+        <div class="col-12 col-md-6 col-lg-3" *ngFor="let restaurant of restaurantList">
+            
+            <div class="card">
+                <img class="card-img-top" src={{restaurant.thumbnailUrl}} alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">{{ restaurant.name }}</h4>
+                    <p class="card-text">Rating: {{ restaurant.rating }}/5</p>
+                    <div class="row">
+                        <div class="col">
+                            <a class="btn btn-success btn-block" (click)="orderHereHandler(restaurant)">Order Here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

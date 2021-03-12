@@ -1,0 +1,166 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John",
+      "email": "john@john.com",
+      "phone": 1111111111,
+      "password": "password1"
+    },
+    {
+      "name": "Peter",
+      "phone": 2222222222,
+      "email": "peter@peter.com",
+      "password": "pass",
+      "id": 2
+    },
+    {
+      "name": "James",
+      "phone": 3333333333,
+      "email": "james@james.com",
+      "password": "password3",
+      "id": 3
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Subway",
+      "rating": 4.5,
+      "thumbnailUrl": "https://via.placeholder.com/300x200"
+    },
+    {
+      "id": 2,
+      "name": "Dominos",
+      "rating": 4.3,
+      "thumbnailUrl": "https://via.placeholder.com/300x200"
+    },
+    {
+      "id": 3,
+      "name": "Chick-fil-a",
+      "rating": 4.7,
+      "thumbnailUrl": "https://via.placeholder.com/300x200"
+    },
+    {
+      "id": 4,
+      "name": "Taco Bell",
+      "rating": 4.9,
+      "thumbnailUrl": "https://via.placeholder.com/300x200"
+    },
+    {
+      "id": 5,
+      "name": "McDonalds",
+      "rating": 4.1,
+      "thumbnailUrl": "https://via.placeholder.com/300x200"
+    },
+    {
+      "id": 6,
+      "name": "Burger King",
+      "rating": 4.4,
+      "thumbnailUrl": "https://via.placeholder.com/300x200"
+    }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "restaurantId": 1,
+      "name": "meat sandwich",
+      "price": "$5.65",
+      "thumbnailUrl": "https://via.placeholder.com/150x100/92c952"
+    },
+    {
+      "id": 2,
+      "restaurantId": 1,
+      "name": "veggie sandwich",
+      "price": "$4.65",
+      "thumbnailUrl": "https://via.placeholder.com/150x100/92c952"
+    }
+    ,
+    {
+      "id": 3,
+      "restaurantId": 2,
+      "name": "pizza",
+      "price": "$10.99",
+      "thumbnailUrl": "https://via.placeholder.com/150x100/92c952"
+    },
+    {
+      "id": 4,
+      "restaurantId": 2,
+      "name": "breadsticks",
+      "price": "$7.00",
+      "thumbnailUrl": "https://via.placeholder.com/150x100/92c952"
+    },
+    {
+      "id": 5,
+      "restaurantId": 3,
+      "name": "chicken sandwich",
+      "price": "$4.30",
+      "thumbnailUrl": "https://via.placeholder.com/150x100/92c952"
+    },
+    {
+      "id": 6,
+      "restaurantId": 3,
+      "name": "chicken biscuit",
+      "price": "$3.00",
+      "thumbnailUrl": "https://via.placeholder.com/150x100/92c952"
+    },
+    {
+      "id": 7,
+      "restaurantId": 4,
+      "name": "burrito",
+      "price": "$1.25",
+      "thumbnailUrl": "https://via.placeholder.com/150x100/92c952"
+    },
+    {
+      "id": 8,
+      "restaurantId": 4,
+      "name": "taco",
+      "price": "$1.00",
+      "thumbnailUrl": "https://via.placeholder.com/150x100/92c952"
+    },
+    {
+      "id": 9,
+      "restaurantId": 5,
+      "name": "McFlurry",
+      "price": "$4.00",
+      "thumbnailUrl": "https://via.placeholder.com/150x100/92c952"
+    },
+    {
+      "id": 10,
+      "restaurantId": 5,
+      "name": "McChicken",
+      "price": "$1.00",
+      "thumbnailUrl": "https://via.placeholder.com/150x100/92c952"
+    },
+    {
+      "id": 11,
+      "restaurantId": 6,
+      "name": "hamburger",
+      "price": "$1.05",
+      "thumbnailUrl": "https://via.placeholder.com/150x100/92c952"
+    },
+    {
+      "id": 12,
+      "restaurantId": 6,
+      "name": "cheeseburger",
+      "price": "$1.48",
+      "thumbnailUrl": "https://via.placeholder.com/150x100/92c952"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "orderedItems": 2
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "john doe"
+    },
+    {
+      "id": 2,
+      "name": "jane dane"
+    }
+  ]
+}
