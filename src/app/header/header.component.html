@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" routerLink="/home">FoodOrb</a>
+        <a class="navbar-brand" [routerLink]="['/home']" [queryParams]= "{userId: this.passId}">FoodOrb</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -8,13 +8,13 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item" routerLinkActive="active">
-              <a class="nav-link" routerLink="/home">Home<span class="sr-only">(current)</span></a>
+              <a class="nav-link" [routerLink]="['/home']" [queryParams]= "{userId: this.passId}">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-              <a class="nav-link" routerLink="/settings">Settings</a>
+              <a class="nav-link" [routerLink]="['/settings']" [queryParams]= "{userId: this.passId}">Settings</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-              <a class="nav-link" routerLink="/friendlist">Friend List</a>
+              <a class="nav-link" [routerLink]="['/friendlist']" [queryParams]= "{userId: this.passId}">Friend List</a>
             </li>
           </ul>
         </div>

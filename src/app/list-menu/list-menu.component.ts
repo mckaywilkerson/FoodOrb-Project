@@ -31,4 +31,16 @@ export class ListMenuComponent implements OnInit {
     this.orderCart.push(item);
   }
 
+  removeItemHandler(index: number): void {
+    if (index > -1) {
+      this.orderCart.splice(index, 1);
+    }
+  }
+
+  submitCartHandler(): void {
+    // make a new order (in db)
+    // send to order page to track
+    alert("submitted cart");
+  }
+
 }

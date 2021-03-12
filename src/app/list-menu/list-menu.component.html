@@ -1,83 +1,92 @@
-<header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" routerLink="/home">FoodOrb</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item" routerLinkActive="active">
-              <a class="nav-link" routerLink="/home">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item" routerLinkActive="active">
-              <a class="nav-link" routerLink="/settings">Settings</a>
-            </li>
-            <li class="nav-item" routerLinkActive="active">
-              <a class="nav-link" routerLink="/friendlist">Friend List</a>
-            </li>
-          </ul>
-
-        </div>
-      </nav>
-</header>
-
+<app-header></app-header>
 
 <div>
     <div class="row">
         <div class="col-8">
 
-<div class="col">
-    <div class="row">
-
-        <div class="col-12 col-md-6 col-lg-3" *ngFor="let item of menuList">
-            
             <div class="card">
-                <img class="card-img-top" src={{item.thumbnailUrl}} alt="Card image cap">
+                <div class="card-header bg-ingo">Menu</div>
                 <div class="card-body">
-                    <h4 class="card-title">{{ item.name }}</h4>
-                    <p class="card-text">Price: {{ item.price }}</p>
                     <div class="row">
-                        <div class="col">
-                            <a class="btn btn-success btn-block" (click)="addToCartHandler(item)">Add to Cart</a>
+
+                        <div class="col-xl-4 col-sm-6 col-12 border-warning mb-2" *ngFor="let item of menuList">
+
+                            <div class="row text-center mb-2">
+                                <div class="col-12">
+                                    <img class="img-fluid mt-3" src={{item.thumbnailUrl}} alt="Card image cap">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6 class="card-title font-weight-bold">{{ item.name }}</h6>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="card-text"> <small> {{ item.price }} </small></p>
+                                </div>
+                            </div>
+
+                            <div class="row text-center mb-1">
+                                <div class="col-12">
+                                    <a class="btn btn-success btn-block" (click)="addToCartHandler(item)">Add to
+                                        Cart</a>
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="col-xl-4">
+            <div class="card">
+
+                <div class="card-header bg-warning">
+
+                    <div *ngIf="orderCart.length == 0">No items in cart</div>
+                    <div *ngIf="orderCart.length > 0">You have {{ orderCart.length }} items in your cart</div>
+
+                </div>
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <table class="table table-borderless">
+
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Amount</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr *ngFor="let item of orderCart; let i = index" [attr.data-index]="i">
+                                        <td>{{ item.name }}</td>
+                                        <td>{{ item.price }}</td>
+                                        <td>
+                                            <a class="btn btn-primary btn-block" (click)="removeItemHandler(i)">Remove</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn btn-success btn-block" (click)="submitCartHandler()" [disabled]="orderCart.length == 0">Submit Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-
-<!-- make something to display the cart -->
-<div class="row">     
-    <div class="col-12" >
-        <table class="table table-borderless">
-
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Amount</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr *ngFor="let item of menuList">
-                    <td>{{item.name}} </td>
-                    <td>{{item.price}} </td>
-                    <td>
-                        <button class="btn btn-info btn-sm" title="Remove Item"><i class="fas fa-trash fa-sm"></i></button>
-                        <!-- (click)="removeItem(cart)" -->
-                    </td>
-                </tr>
-            </tbody>
-        
-        </table>
-    </div>
-</div>
-
-</div>
-</div>
 </div>

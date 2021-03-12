@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  passId = this.route.snapshot.queryParamMap.get('userId');
+
+  constructor( private route: ActivatedRoute ) { }
 
   ngOnInit(): void {
   }
