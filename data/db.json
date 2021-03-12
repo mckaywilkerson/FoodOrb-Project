@@ -74,8 +74,7 @@
       "name": "veggie sandwich",
       "price": "$4.65",
       "thumbnailUrl": "https://via.placeholder.com/150x100/92c952"
-    }
-    ,
+    },
     {
       "id": 3,
       "restaurantId": 2,
@@ -151,6 +150,14 @@
     {
       "id": 1,
       "orderedItems": 2
+    },
+    {
+      "orderedItems": 2,
+      "id": 2
+    },
+    {
+      "orderedItems": 2,
+      "id": 3
     }
   ],
   "friends": [
