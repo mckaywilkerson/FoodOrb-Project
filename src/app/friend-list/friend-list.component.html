@@ -1,3 +1,24 @@
 <app-header></app-header>
 
-<p>friend-list works!</p>
+
+<div class="container">
+
+    <div class="row" *ngFor="let friend of friendList">
+        <div class="col-md-8">
+            {{ friend.name }}
+            <div class="row">
+                <div class="col-md-12">
+                    Followers: {{ friend.followerCount }}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <br>
+            <button *ngIf="!friend.added" class="btn btn-success" (click)="addFriendHandler(friend)"> Add Friend</button>
+            <button *ngIf="friend.added" class="btn btn-danger" (click)="removeFriendHandler(friend)"> Remove Friend</button>
+        </div>
+
+    </div>
+    
+</div>

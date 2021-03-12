@@ -186,11 +186,33 @@
   "friends": [
     {
       "id": 1,
-      "name": "john doe"
+      "name": "John Doe",
+      "followerCount": "1k",
+      "added": false
     },
     {
       "id": 2,
-      "name": "jane dane"
+      "name": "Jane Dane",
+      "followerCount": "1.2k",
+      "added": false
+    },
+    {
+      "id": 3,
+      "name": "Susan B Anthony",
+      "followerCount": "2.5k",
+      "added": false
+    },
+    {
+      "id": 4,
+      "name": "Martin L King",
+      "followerCount": "3.9k",
+      "added": false
+    },
+    {
+      "id": 5,
+      "name": "Moe Damion",
+      "followerCount": ".4k",
+      "added": false
     }
   ]
 }
