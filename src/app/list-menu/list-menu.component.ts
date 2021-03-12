@@ -41,7 +41,8 @@ export class ListMenuComponent implements OnInit {
   submitCartHandler(): void {
 
     this.newOrder = {
-      orderedItems: this.orderCart.length
+      orderedItems: this.orderCart.length,
+      status: "placed"
     }
 
     // make a new order (in db)

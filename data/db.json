@@ -149,15 +149,38 @@
   "orders": [
     {
       "id": 1,
-      "orderedItems": 2
+      "orderedItems": 2,
+      "status": "placed"
     },
     {
       "orderedItems": 2,
-      "id": 2
+      "id": 2,
+      "status": "placed"
     },
     {
       "orderedItems": 2,
-      "id": 3
+      "id": 3,
+      "status": "placed"
+    },
+    {
+      "orderedItems": 2,
+      "status": "placed",
+      "id": 4
+    },
+    {
+      "orderedItems": 2,
+      "status": "placed",
+      "id": 5
+    },
+    {
+      "orderedItems": 2,
+      "status": "delivered",
+      "id": 6
+    },
+    {
+      "orderedItems": 3,
+      "status": "delivered",
+      "id": 7
     }
   ],
   "friends": [

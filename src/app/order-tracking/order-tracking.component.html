@@ -1,3 +1,39 @@
 <app-header></app-header>
 
-<p>order-tracking works!</p>
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">Order #0{{ this.orderNum }}</h1>
+        <p>Number of Items: {{ order.orderedItems }}</p>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <p>
+                <button class="btn btn-primary" [disabled]="true">Order Placed</button>
+            </p>
+        </div>
+        <div class="col-md-4 text-center">
+            <p>
+                <button class="btn btn-primary" (click)="pickedUpHandler()" [disabled]="orderStatus == 'pickedup' || orderStatus == 'delivered'">Order Picked Up</button>
+            </p>
+        </div>
+        <div class="col-md-4 text-center">
+            <p>
+                <button class="btn btn-primary" (click)="deliveredHandler()" [disabled]="orderStatus == 'delivered'">Order Delivered</button>
+            </p>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h3>Order status:</h3>
+            <div *ngIf="orderStatus=='placed'" class="badge badge-success text-wrap" style="font-size: 26px">Placed Order</div>
+            <div *ngIf="orderStatus=='pickedup'" class="badge badge-success text-wrap" style="font-size: 26px">Picked Up</div>
+            <div *ngIf="orderStatus=='delivered'" class="badge badge-success text-wrap" style="font-size: 26px">Delivered</div>
+        </div>
+    </div>
+</div>
