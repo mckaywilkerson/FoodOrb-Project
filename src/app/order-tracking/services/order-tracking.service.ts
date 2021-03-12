@@ -11,10 +11,10 @@ export class OrderTrackingService {
 
   constructor( private http: HttpClient ) { }
 
-  getOrderStatus(userId: string): Observable<any> {
+  getOrderStatus(orderId: string): Observable<any> {
 
     const param = new HttpParams()
-      .set('id', userId);
+      .set('id', orderId);
 
     return this.http.get('http://localhost:3000/orders', { params: param })
       .pipe( map( (res: any) => {

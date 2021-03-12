@@ -9,7 +9,7 @@
     },
     {
       "name": "Peter",
-      "phone": 2222222222,
+      "phone": "2222222222",
       "email": "peter@peter.com",
       "password": "pass",
       "id": 2
